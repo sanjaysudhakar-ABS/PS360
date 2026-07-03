@@ -74,7 +74,7 @@ export async function submitContactForm(
   if (resendApiKey) {
     try {
       const resend = new Resend(resendApiKey);
-      await resend.emails.send({
+      const { error } = await resend.emails.send({
         from: `${siteConfig.name} Website <onboarding@resend.dev>`,
         to: leadNotificationEmail,
         replyTo: email,
@@ -90,6 +90,17 @@ export async function submitContactForm(
           message,
         ].join("\n"),
       });
+
+      // The Resend SDK resolves (rather than throws) on API-level failures,
+      // so a successful await doesn't guarantee the email was sent.
+      if (error) {
+        console.error("Resend API returned an error:", error);
+        return {
+          status: "error",
+          message:
+            "Something went wrong sending your message. Please email us directly or try again shortly.",
+        };
+      }
     } catch (error) {
       console.error("Failed to send contact form email via Resend:", error);
       return {
