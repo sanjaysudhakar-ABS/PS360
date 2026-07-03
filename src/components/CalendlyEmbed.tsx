@@ -18,7 +18,7 @@ export function CalendlyEmbed() {
             NEXT_PUBLIC_CALENDLY_URL
           </code>{" "}
           to your Calendly link to enable instant booking here — in the
-          meantime, use the form or call us directly.
+          meantime, use the form or email us directly.
         </p>
       </div>
     );

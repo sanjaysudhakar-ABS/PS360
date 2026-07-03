@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import { ArrowRight } from "lucide-react";
-import { getBlogPostBySlug, blogPosts } from "@/lib/blog-data";
+import { getBlogPostBySlug, getBlogPosts } from "@/lib/blog";
 import { siteConfig } from "@/lib/site-config";
 import { CTASection } from "@/components/CTASection";
 import {
@@ -11,7 +11,7 @@ import {
 } from "@/components/StructuredData";
 
 export function generateStaticParams() {
-  return blogPosts.map((post) => ({ slug: post.slug }));
+  return getBlogPosts().map((post) => ({ slug: post.slug }));
 }
 
 export async function generateMetadata({
@@ -46,7 +46,9 @@ export default async function BlogPostPage({
     notFound();
   }
 
-  const otherPosts = blogPosts.filter((p) => p.slug !== post.slug).slice(0, 2);
+  const otherPosts = getBlogPosts()
+    .filter((p) => p.slug !== post.slug)
+    .slice(0, 2);
 
   return (
     <>
@@ -79,7 +81,7 @@ export default async function BlogPostPage({
           <div className="mt-6 flex items-center gap-3 text-xs font-medium uppercase tracking-wide text-accent-500">
             <span>{post.category}</span>
             <span className="text-brand-800/40">
-              {new Date(post.publishedAt).toLocaleDateString("en-US", {
+              {new Date(post.publishedAt).toLocaleDateString("en-IN", {
                 month: "long",
                 day: "numeric",
                 year: "numeric",
@@ -93,47 +95,17 @@ export default async function BlogPostPage({
           </h1>
           <p className="mt-4 text-lg text-brand-800/70">{post.description}</p>
 
-          <div className="prose-content mt-10 space-y-8">
-            {post.sections.map((section, index) => (
-              <div key={section.heading ?? index}>
-                {section.heading && (
-                  <h2 className="text-xl font-semibold text-brand-950">
-                    {section.heading}
-                  </h2>
-                )}
-                <div className="mt-3 space-y-4">
-                  {section.paragraphs.map((paragraph, pIndex) => (
-                    <p
-                      key={pIndex}
-                      className="leading-relaxed text-brand-900/90"
-                    >
-                      {paragraph}
-                    </p>
-                  ))}
-                </div>
-                {section.bullets && (
-                  <ul className="mt-4 space-y-2">
-                    {section.bullets.map((bullet) => (
-                      <li
-                        key={bullet}
-                        className="flex items-start gap-2 leading-relaxed text-brand-900/90"
-                      >
-                        <span className="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-accent-500" />
-                        {bullet}
-                      </li>
-                    ))}
-                  </ul>
-                )}
-              </div>
-            ))}
-          </div>
+          <div
+            className="blog-prose mt-10"
+            dangerouslySetInnerHTML={{ __html: post.html }}
+          />
 
           <div className="mt-14 rounded-xl border border-black/10 bg-brand-950/[0.02] p-7">
             <p className="font-semibold text-brand-950">
               Want help applying this to your business?
             </p>
             <p className="mt-2 text-sm text-brand-800/70">
-              Book a free 30-minute consult with a PS360 advisor.
+              Book a free consultation with a {siteConfig.name} advisor.
             </p>
             <Link
               href="/contact"

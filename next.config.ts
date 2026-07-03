@@ -1,17 +1,14 @@
 import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
+  // Static export for Netlify hosting. Server-only features (Server Actions,
+  // headers(), redirects()) are unavailable — forms go through Netlify Forms
+  // and security headers live in netlify.toml.
+  output: "export",
+  trailingSlash: true,
   poweredByHeader: false,
-  async headers() {
-    return [
-      {
-        source: "/:path*",
-        headers: [
-          { key: "X-Content-Type-Options", value: "nosniff" },
-          { key: "Referrer-Policy", value: "strict-origin-when-cross-origin" },
-        ],
-      },
-    ];
+  images: {
+    unoptimized: true,
   },
 };
 

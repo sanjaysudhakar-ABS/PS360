@@ -3,9 +3,9 @@ import { ArrowRight, CheckCircle2 } from "lucide-react";
 import { siteConfig } from "@/lib/site-config";
 
 const proofPoints = [
-  "No long-term lock-in — start with a scoped diagnostic",
-  "Senior consultants on every engagement, not just the pitch",
-  "Strategy paired with hands-on implementation support",
+  "50+ companies transformed",
+  "40% average CSAT improvement",
+  "$10M+ client revenue impact",
 ];
 
 export function Hero() {
@@ -22,15 +22,16 @@ export function Hero() {
       <div className="relative mx-auto max-w-7xl px-6 py-24 sm:py-28 lg:px-8 lg:py-32">
         <div className="max-w-2xl">
           <p className="inline-flex items-center rounded-full border border-white/20 bg-white/5 px-3 py-1 text-xs font-medium tracking-wide text-white/80 uppercase">
-            {siteConfig.tagline}
+            Customer Experience &amp; Success Consulting
           </p>
           <h1 className="mt-6 text-4xl font-semibold tracking-tight sm:text-5xl lg:text-6xl">
-            Strategy, finance, HR, and operations advisory — under one roof.
+            Transform customer experience into competitive advantage.
           </h1>
           <p className="mt-6 text-lg text-white/70">
-            {siteConfig.name} helps ambitious SMEs and growing enterprises
-            plan smarter, operate leaner, and scale with confidence. One
-            advisory partner instead of five disconnected vendors.
+            {siteConfig.name} helps growing businesses build exceptional
+            post-sales experiences that drive retention, growth, and
+            profitability — across onboarding, customer success, support
+            operations, and renewals.
           </p>
 
           <div className="mt-9 flex flex-col gap-4 sm:flex-row">
@@ -38,14 +39,14 @@ export function Hero() {
               href="/contact"
               className="inline-flex items-center justify-center gap-2 rounded-md bg-accent-500 px-6 py-3.5 text-sm font-semibold text-white shadow-sm transition hover:bg-accent-400"
             >
-              Book your free consult
+              Start your transformation
               <ArrowRight className="h-4 w-4" />
             </Link>
             <Link
               href="/services"
               className="inline-flex items-center justify-center gap-2 rounded-md border border-white/20 px-6 py-3.5 text-sm font-semibold text-white transition hover:bg-white/10"
             >
-              Explore our services
+              Explore services
             </Link>
           </div>
 

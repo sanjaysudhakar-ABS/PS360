@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
-import { Phone, Mail, MapPin, MessageCircle } from "lucide-react";
+import type { SVGProps } from "react";
+import { Mail, MapPin } from "lucide-react";
 import { ContactForm } from "@/components/ContactForm";
 import { CalendlyEmbed } from "@/components/CalendlyEmbed";
 import { BreadcrumbJsonLd } from "@/components/StructuredData";
@@ -8,23 +9,30 @@ import { siteConfig } from "@/lib/site-config";
 export const metadata: Metadata = {
   title: "Contact Us",
   description:
-    "Get in touch with PS360 for a free 30-minute business consulting consult. Call, WhatsApp, book online, or send us a message.",
+    "Ready to transform your customer experience? Contact PS360 Consulting to book a consultation — we respond within 24 hours.",
   alternates: { canonical: "/contact" },
 };
 
+function LinkedinIcon(props: SVGProps<SVGSVGElement>) {
+  return (
+    <svg
+      viewBox="0 0 24 24"
+      fill="none"
+      stroke="currentColor"
+      strokeWidth="2"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+      aria-hidden="true"
+      {...props}
+    >
+      <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z" />
+      <rect width="4" height="12" x="2" y="9" />
+      <circle cx="4" cy="4" r="2" />
+    </svg>
+  );
+}
+
 const contactMethods = [
-  {
-    icon: Phone,
-    label: "Call us",
-    value: siteConfig.contact.phoneDisplay,
-    href: `tel:${siteConfig.contact.phoneE164}`,
-  },
-  {
-    icon: MessageCircle,
-    label: "WhatsApp",
-    value: "Message us instantly",
-    href: `https://wa.me/${siteConfig.contact.whatsapp}`,
-  },
   {
     icon: Mail,
     label: "Email",
@@ -32,9 +40,15 @@ const contactMethods = [
     href: `mailto:${siteConfig.contact.email}`,
   },
   {
+    icon: LinkedinIcon,
+    label: "LinkedIn",
+    value: "PS360 Consulting",
+    href: siteConfig.social.linkedin,
+  },
+  {
     icon: MapPin,
-    label: "Office",
-    value: `${siteConfig.contact.addressLine1}, ${siteConfig.contact.addressLocality}, ${siteConfig.contact.addressRegion}`,
+    label: "Location",
+    value: siteConfig.contact.location,
     href: undefined,
   },
 ];
@@ -52,11 +66,12 @@ export default function ContactPage() {
       <section className="bg-brand-950/[0.02] py-16 sm:py-20">
         <div className="mx-auto max-w-4xl px-6 text-center lg:px-8">
           <h1 className="text-4xl font-semibold tracking-tight text-brand-950 sm:text-5xl">
-            Let&apos;s talk about your business
+            Let&apos;s talk about your customers
           </h1>
           <p className="mt-5 text-lg text-brand-800/70">
-            Book a free 30-minute consult, or reach us directly by phone,
-            WhatsApp, or email — whichever is fastest for you.
+            Ready to transform your customer experience? Fill out the form and
+            we&apos;ll get back to you within 24 hours to schedule your
+            consultation.
           </p>
         </div>
       </section>
@@ -106,7 +121,7 @@ export default function ContactPage() {
           <div className="lg:col-span-3">
             <div className="rounded-xl border border-black/10 p-7">
               <h2 className="text-lg font-semibold text-brand-950">
-                Send us a message
+                Book a consultation
               </h2>
               <div className="mt-6">
                 <ContactForm />
@@ -122,8 +137,8 @@ export default function ContactPage() {
             Or book a time directly
           </h2>
           <p className="mt-2 text-sm text-brand-800/70">
-            Pick a 30-minute slot that works for you — no back-and-forth
-            emails required.
+            Pick a slot that works for you — no back-and-forth emails
+            required.
           </p>
           <div className="mt-6">
             <CalendlyEmbed />

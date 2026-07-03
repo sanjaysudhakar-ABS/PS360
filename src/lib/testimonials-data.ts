@@ -5,27 +5,28 @@ export interface Testimonial {
   company: string;
 }
 
-// TODO: replace with real client testimonials before launch.
+// TODO: replace with real client testimonials (with permission) before
+// featuring named quotes. These are illustrative placeholders.
 export const testimonials: Testimonial[] = [
   {
     quote:
-      "PS360 turned an overwhelming list of priorities into a plan we could actually execute. Revenue is up 34% since we implemented their growth roadmap.",
-    name: "Alexandra Reyes",
-    role: "CEO",
-    company: "Northfield Retail Group",
+      "PS360 rebuilt our onboarding journey around time-to-first-value. Activation in the first 30 days jumped visibly within one quarter, and our renewal conversations got a lot easier.",
+    name: "Head of Customer Success",
+    role: "",
+    company: "B2B SaaS scale-up",
   },
   {
     quote:
-      "Their fractional CFO support gave our board the reporting discipline we needed to close our Series A three months ahead of schedule.",
-    name: "Marcus Chen",
-    role: "Founder",
-    company: "Loopwave Logistics",
+      "They didn't hand us a deck and leave. They sat with our support leads, redesigned the queues, and coached the team until the new SLAs held on their own.",
+    name: "Support Operations Lead",
+    role: "",
+    company: "Fintech platform",
   },
   {
     quote:
-      "We went from reactive hiring to a real org design in under two quarters. The HR playbooks alone paid for the engagement.",
-    name: "Priya Nathan",
-    role: "COO",
-    company: "Bridgeline Manufacturing",
+      "The churn diagnostic was uncomfortable reading — in the best way. For the first time we knew which cancellations were preventable and exactly which plays to run.",
+    name: "Chief Operating Officer",
+    role: "",
+    company: "E-commerce subscription brand",
   },
 ];

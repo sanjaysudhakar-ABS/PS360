@@ -28,7 +28,9 @@ export function Testimonials() {
                 </span>
                 <span className="text-brand-800/60">
                   {" "}
-                  — {testimonial.role}, {testimonial.company}
+                  — {[testimonial.role, testimonial.company]
+                    .filter(Boolean)
+                    .join(", ")}
                 </span>
               </figcaption>
             </figure>

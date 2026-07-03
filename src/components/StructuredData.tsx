@@ -6,21 +6,16 @@ export function OrganizationJsonLd() {
     "@type": "ProfessionalService",
     "@id": `${siteConfig.url}/#organization`,
     name: siteConfig.legalName,
-    alternateName: siteConfig.name,
     url: siteConfig.url,
     description: siteConfig.description,
-    telephone: siteConfig.contact.phoneE164,
     email: siteConfig.contact.email,
+    foundingDate: siteConfig.foundingYear,
     address: {
       "@type": "PostalAddress",
-      streetAddress: siteConfig.contact.addressLine1,
-      addressLocality: siteConfig.contact.addressLocality,
-      addressRegion: siteConfig.contact.addressRegion,
-      postalCode: siteConfig.contact.postalCode,
       addressCountry: siteConfig.contact.addressCountry,
     },
     sameAs: Object.values(siteConfig.social),
-    areaServed: "US",
+    areaServed: "Worldwide",
   };
 
   return (

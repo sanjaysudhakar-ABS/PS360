@@ -5,9 +5,9 @@ import { BreadcrumbJsonLd } from "@/components/StructuredData";
 import { siteConfig } from "@/lib/site-config";
 
 export const metadata: Metadata = {
-  title: "Business Consulting Services",
+  title: "Customer Experience & Success Services",
   description:
-    "Explore PS360's full range of business consulting services: strategy, financial advisory, HR, digital transformation, operations, and risk & compliance.",
+    "Explore PS360 Consulting's services: CX strategy, customer success management, support desk operations, onboarding, retention, and voice-of-customer analytics.",
   alternates: { canonical: "/services" },
 };
 
@@ -26,8 +26,9 @@ export default function ServicesPage() {
             Our services
           </h1>
           <p className="mt-5 text-lg text-brand-800/70">
-            Six practice areas, each led by senior consultants who stay
-            involved from diagnostic through implementation.
+            Comprehensive customer experience and success consulting services
+            designed to transform your post-sales operation and drive
+            measurable results.
           </p>
         </div>
       </section>

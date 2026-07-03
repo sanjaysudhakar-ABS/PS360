@@ -11,7 +11,7 @@ import { CTASection } from "@/components/CTASection";
 import { siteConfig } from "@/lib/site-config";
 
 export const metadata: Metadata = {
-  title: `${siteConfig.name} — 360-Degree Business Advisory for Growing Companies`,
+  title: `${siteConfig.name} - ${siteConfig.tagline}`,
   description: siteConfig.description,
   alternates: { canonical: "/" },
 };
@@ -27,10 +27,10 @@ export default function HomePage() {
           <div className="flex flex-col justify-between gap-6 sm:flex-row sm:items-end">
             <div className="max-w-2xl">
               <h2 className="text-sm font-semibold uppercase tracking-wide text-accent-500">
-                What we do
+                Our expertise
               </h2>
               <p className="mt-3 text-3xl font-semibold tracking-tight text-brand-950 sm:text-4xl">
-                Six practice areas. One accountable advisory team.
+                Consulting for every stage of the post-sales journey.
               </p>
             </div>
             <Link

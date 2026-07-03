@@ -37,3 +37,65 @@ body {
   background: var(--accent-500);
   color: white;
 }
+
+/* Rendered markdown body for blog posts. */
+.blog-prose {
+  color: color-mix(in srgb, var(--brand-900) 90%, transparent);
+  line-height: 1.75;
+}
+
+.blog-prose h2 {
+  margin-top: 2.25rem;
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: var(--brand-950);
+}
+
+.blog-prose h3 {
+  margin-top: 1.75rem;
+  font-size: 1.05rem;
+  font-weight: 600;
+  color: var(--brand-950);
+}
+
+.blog-prose p {
+  margin-top: 1rem;
+}
+
+.blog-prose ul,
+.blog-prose ol {
+  margin-top: 1rem;
+  padding-left: 1.5rem;
+}
+
+.blog-prose ul {
+  list-style: disc;
+}
+
+.blog-prose ol {
+  list-style: decimal;
+}
+
+.blog-prose li {
+  margin-top: 0.5rem;
+}
+
+.blog-prose li::marker {
+  color: var(--accent-500);
+}
+
+.blog-prose a {
+  color: var(--accent-500);
+  text-decoration: underline;
+}
+
+.blog-prose strong {
+  color: var(--brand-950);
+}
+
+.blog-prose blockquote {
+  margin-top: 1rem;
+  border-left: 3px solid var(--accent-500);
+  padding-left: 1rem;
+  font-style: italic;
+}

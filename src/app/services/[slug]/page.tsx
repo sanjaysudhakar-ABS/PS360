@@ -148,11 +148,11 @@ export default async function ServiceDetailPage({
           <div>
             <div className="sticky top-24 rounded-xl border border-black/10 bg-brand-950/[0.02] p-7">
               <h3 className="text-lg font-semibold text-brand-950">
-                Get a free consult
+                Book a consultation
               </h3>
               <p className="mt-2 text-sm text-brand-800/70">
-                Tell us about your business and we&apos;ll follow up within
-                one business day.
+                Tell us about your customer experience challenges and
+                we&apos;ll get back to you within 24 hours.
               </p>
               <div className="mt-6">
                 <ContactForm defaultService={service.slug} />

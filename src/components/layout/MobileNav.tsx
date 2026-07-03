@@ -9,7 +9,7 @@ export function MobileNav() {
   const [open, setOpen] = useState(false);
 
   return (
-    <div className="md:hidden">
+    <div className="lg:hidden">
       <button
         type="button"
         aria-label={open ? "Close menu" : "Open menu"}
@@ -34,17 +34,17 @@ export function MobileNav() {
               </Link>
             ))}
             <a
-              href={`tel:${siteConfig.contact.phoneE164}`}
+              href={`mailto:${siteConfig.contact.email}`}
               className="text-base font-medium text-brand-900"
             >
-              {siteConfig.contact.phoneDisplay}
+              {siteConfig.contact.email}
             </a>
             <Link
               href="/contact"
               onClick={() => setOpen(false)}
               className="rounded-md bg-accent-500 px-4 py-2 text-center text-sm font-semibold text-white"
             >
-              Book a free consult
+              Book a Consult
             </Link>
           </nav>
         </div>

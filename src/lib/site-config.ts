@@ -1,48 +1,52 @@
 export const siteConfig = {
-  name: "PS360",
-  legalName: "PS360 Consulting LLP",
-  tagline: "360-Degree Business Advisory",
+  name: "PS360 Consulting",
+  legalName: "PS360 Consulting",
+  tagline: "Customer Experience & Success Consulting",
   description:
-    "PS360 is a full-service business consulting firm helping ambitious SMEs and growing enterprises plan smarter, operate leaner, and scale faster with strategy, financial advisory, HR, operations, and digital transformation expertise under one roof.",
+    "Transform your customer experience with PS360 Consulting. Expert CX strategy, customer success management, and support operations consulting services.",
   shortDescription:
-    "Full-service business consulting for strategy, finance, HR, operations, and digital transformation.",
-  url: process.env.NEXT_PUBLIC_SITE_URL ?? "https://www.ps360.com",
-  ogImageAlt: "PS360 — 360-Degree Business Advisory",
+    "Customer experience and customer success consulting — CX strategy, customer success management, and support operations.",
+  url: process.env.NEXT_PUBLIC_SITE_URL ?? "https://ps360.in",
+  foundingYear: "2020",
+  locale: "en-IN",
 
-  // TODO: replace with real contact details before launch.
   contact: {
-    phoneDisplay: "+1 (555) 360-0360",
-    phoneE164: "+15553600360",
-    whatsapp: "15553600360",
-    email: "hello@ps360.com",
-    addressLine1: "100 Advisory Way, Suite 360",
-    addressLocality: "Austin",
-    addressRegion: "TX",
-    postalCode: "78701",
-    addressCountry: "US",
+    email: "hello@ps360.in",
+    location: "Based in India, serving clients globally",
+    addressCountry: "IN",
+    // Optional direct-contact channels. Leave empty to hide the
+    // click-to-call / WhatsApp buttons; fill in to enable them.
+    phoneDisplay: "",
+    phoneE164: "",
+    whatsapp: "",
   },
 
   // Set NEXT_PUBLIC_CALENDLY_URL to your real Calendly scheduling link to enable the embed.
   calendlyUrl: process.env.NEXT_PUBLIC_CALENDLY_URL ?? "",
 
+  analytics: {
+    ga4Id: "G-NQ7NRH7XNY",
+    adsenseClient: "ca-pub-5101218278922497",
+  },
+
   social: {
-    linkedin: "https://www.linkedin.com/company/ps360",
-    twitter: "https://twitter.com/ps360",
-    facebook: "https://www.facebook.com/ps360",
+    linkedin: "https://www.linkedin.com/company/ps360-consulting",
   },
 
   nav: [
     { label: "Services", href: "/services" },
+    { label: "Case Studies", href: "/case-studies" },
     { label: "About", href: "/about" },
     { label: "Insights", href: "/blog" },
     { label: "Contact", href: "/contact" },
   ],
 
+  // Headline numbers published on the current ps360.in site.
   stats: [
-    { value: "180+", label: "Clients advised" },
-    { value: "12", label: "Years in business" },
-    { value: "$420M+", label: "Client value unlocked" },
-    { value: "94%", label: "Client retention rate" },
+    { value: "50+", label: "Companies transformed" },
+    { value: "40%", label: "Average CSAT improvement" },
+    { value: "$10M+", label: "Client revenue impact" },
+    { value: "2020", label: "Founded" },
   ],
 } as const;
 

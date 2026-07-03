@@ -1,23 +1,29 @@
-import { Target, Users2, LineChart } from "lucide-react";
+import { Search, Target, Settings, TrendingUp } from "lucide-react";
 
-const pillars = [
+const steps = [
+  {
+    icon: Search,
+    title: "Discovery & Assessment",
+    description:
+      "Comprehensive analysis of your current customer experience and identification of improvement opportunities, grounded in your support, success, and usage data.",
+  },
   {
     icon: Target,
-    title: "One partner, full scope",
+    title: "Strategy Development",
     description:
-      "Strategy, finance, HR, operations, and technology advisory from a single accountable team — no more stitching together five vendors who don't talk to each other.",
+      "A custom strategy aligned with your business goals and customer needs, with a clear roadmap and priorities ranked by revenue impact.",
   },
   {
-    icon: Users2,
-    title: "Senior consultants, not just senior pitches",
+    icon: Settings,
+    title: "Implementation",
     description:
-      "The partner you meet in the first call is the person in your working sessions every week — not handed off to a junior team after signing.",
+      "Hands-on execution with your team — playbooks, tooling, and training — ensuring proper adoption, not just a strategy deck.",
   },
   {
-    icon: LineChart,
-    title: "Built for execution, not just decks",
+    icon: TrendingUp,
+    title: "Optimization",
     description:
-      "Every engagement includes implementation support and milestone reviews, so recommendations actually change how the business runs.",
+      "Continuous monitoring and refinement through your first measurement cycles to maximize results and keep improvements compounding.",
   },
 ];
 
@@ -27,24 +33,29 @@ export function WhyUs() {
       <div className="mx-auto max-w-7xl px-6 lg:px-8">
         <div className="max-w-2xl">
           <h2 className="text-sm font-semibold uppercase tracking-wide text-accent-500">
-            Why PS360
+            How we work
           </h2>
           <p className="mt-3 text-3xl font-semibold tracking-tight text-brand-950 sm:text-4xl">
-            Consulting that&apos;s built to be implemented, not just presented.
+            A proven methodology for customer experience transformation.
           </p>
         </div>
 
-        <div className="mt-14 grid gap-10 sm:grid-cols-3">
-          {pillars.map((pillar) => (
-            <div key={pillar.title}>
-              <div className="flex h-11 w-11 items-center justify-center rounded-lg bg-brand-950 text-white">
-                <pillar.icon className="h-5 w-5" />
+        <div className="mt-14 grid gap-10 sm:grid-cols-2 lg:grid-cols-4">
+          {steps.map((step, index) => (
+            <div key={step.title}>
+              <div className="flex items-center gap-3">
+                <div className="flex h-11 w-11 items-center justify-center rounded-lg bg-brand-950 text-white">
+                  <step.icon className="h-5 w-5" />
+                </div>
+                <span className="text-sm font-semibold text-accent-500">
+                  {String(index + 1).padStart(2, "0")}
+                </span>
               </div>
               <h3 className="mt-5 text-lg font-semibold text-brand-950">
-                {pillar.title}
+                {step.title}
               </h3>
               <p className="mt-2 text-sm leading-relaxed text-brand-800/70">
-                {pillar.description}
+                {step.description}
               </p>
             </div>
           ))}

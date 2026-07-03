@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Users2, Target, ShieldCheck, Handshake } from "lucide-react";
+import { Target, Users, Zap, TrendingUp } from "lucide-react";
 import { CTASection } from "@/components/CTASection";
 import { BreadcrumbJsonLd } from "@/components/StructuredData";
 import { siteConfig } from "@/lib/site-config";
@@ -7,34 +7,34 @@ import { siteConfig } from "@/lib/site-config";
 export const metadata: Metadata = {
   title: "About Us",
   description:
-    "PS360 is a 360-degree business advisory firm helping SMEs and growing enterprises across strategy, finance, HR, operations, and technology.",
+    "PS360 Consulting is a team of experienced customer experience and success professionals helping businesses build exceptional customer relationships since 2020.",
   alternates: { canonical: "/about" },
 };
 
 const values = [
   {
     icon: Target,
-    title: "Outcomes over hours",
+    title: "Results-oriented",
     description:
-      "We measure success by the results our clients see, not the hours we bill. Every engagement starts with a clear definition of what 'done' looks like.",
+      "Every recommendation is tied to measurable business outcomes and ROI — retention, expansion, and lifetime value, not vanity metrics.",
   },
   {
-    icon: Handshake,
-    title: "Transparent, fixed-scope pricing",
+    icon: Users,
+    title: "Customer-centric",
     description:
-      "No open-ended retainers you can't evaluate. Every engagement starts with a scoped diagnostic and clear pricing before you commit further.",
+      "We put customers at the center of everything we design and implement, because experience is what they remember after the invoice is paid.",
   },
   {
-    icon: Users2,
-    title: "Senior talent, every engagement",
+    icon: Zap,
+    title: "Practical approach",
     description:
-      "The consultants who scope your engagement are the ones doing the work — not a hand-off to a junior team after the contract is signed.",
+      "Our solutions are designed for real-world implementation and sustainable adoption — built to survive contact with your actual team and tooling.",
   },
   {
-    icon: ShieldCheck,
-    title: "Practical, not theoretical",
+    icon: TrendingUp,
+    title: "Continuous improvement",
     description:
-      "We've run operations, not just advised on them. Recommendations are built to survive contact with your actual team and constraints.",
+      "Customer expectations don't stand still, and neither should your experience. We build measurement and iteration into everything we deliver.",
   },
 ];
 
@@ -51,23 +51,50 @@ export default function AboutPage() {
       <section className="bg-brand-950/[0.02] py-16 sm:py-20">
         <div className="mx-auto max-w-4xl px-6 text-center lg:px-8">
           <h1 className="text-4xl font-semibold tracking-tight text-brand-950 sm:text-5xl">
-            A single advisory partner for the whole business
+            About {siteConfig.name}
           </h1>
           <p className="mt-5 text-lg text-brand-800/70">
-            {siteConfig.name} was founded on a simple observation: growing
-            businesses don&apos;t have a strategy problem, a finance problem,
-            or an HR problem in isolation — they have a business problem
-            that touches all of them at once. We built a firm that advises
-            across the full 360-degree view instead of forcing clients to
-            stitch together five specialist vendors.
+            We&apos;re a team of experienced customer experience and success
+            professionals dedicated to helping businesses build exceptional
+            customer relationships.
           </p>
         </div>
       </section>
 
       <section className="py-16 sm:py-20">
+        <div className="mx-auto max-w-3xl px-6 lg:px-8">
+          <h2 className="text-2xl font-semibold tracking-tight text-brand-950">
+            Our story
+          </h2>
+          <div className="mt-5 space-y-4 leading-relaxed text-brand-900/90">
+            <p>
+              Founded in 2020, {siteConfig.name} emerged from a simple
+              observation: while companies invest heavily in acquiring
+              customers, many struggle to create experiences that keep them
+              engaged and coming back. Our founders, seasoned CX and customer
+              success professionals, recognized the need for practical,
+              results-oriented consulting that bridges strategy with
+              execution.
+            </p>
+            <p>
+              Today, we&apos;ve helped over 50 companies across fintech,
+              e-commerce, SaaS, and other industries transform their customer
+              experience and achieve measurable business results. Our approach
+              combines deep expertise with hands-on implementation, ensuring
+              that our strategies translate into real-world success.
+            </p>
+            <p>
+              We&apos;re based in India and serve clients globally, running
+              engagements remotely across time zones.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section className="bg-brand-950/[0.02] py-16 sm:py-20">
         <div className="mx-auto max-w-7xl px-6 lg:px-8">
           <h2 className="text-sm font-semibold uppercase tracking-wide text-accent-500">
-            How we operate
+            Our values
           </h2>
           <p className="mt-3 max-w-2xl text-3xl font-semibold tracking-tight text-brand-950 sm:text-4xl">
             Principles that shape every engagement

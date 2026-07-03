@@ -5,28 +5,33 @@ export interface Faq {
 
 export const faqs: Faq[] = [
   {
-    question: "What size of business does PS360 typically work with?",
+    question: "What kind of companies does PS360 Consulting work with?",
     answer:
-      "We primarily work with businesses ranging from early-growth startups to mid-market companies with up to roughly 500 employees — organizations that have outgrown ad-hoc processes but don't yet have a full in-house strategy, finance, or ops function.",
+      "We work with growing businesses across fintech, e-commerce, SaaS, and other service-led industries — typically companies that have found product-market fit and now need their post-sales experience (onboarding, success, support, renewals) to keep pace with growth.",
+  },
+  {
+    question: "Do you only advise, or do you help implement?",
+    answer:
+      "Both. Every engagement pairs strategy with hands-on execution: we work alongside your customer success and support teams through implementation, and stay engaged through the first measurement cycles so improvements actually stick.",
   },
   {
     question: "How long does a typical engagement last?",
     answer:
-      "Most engagements start with a 2–4 week scoped diagnostic, followed by a 3–6 month implementation phase. Many clients extend into an ongoing advisory retainer once the initial roadmap is in motion, but there's never an obligation to continue past the diagnostic.",
+      "Most engagements start with a 2–4 week discovery and assessment, followed by an 8–12 week implementation phase. Many clients continue with an ongoing optimization retainer, but there is never an obligation to extend beyond the initial scope.",
   },
   {
-    question: "Do you work with a specific industry?",
+    question: "We're not sure whether our problem is support, success, or onboarding. Can you still help?",
     answer:
-      "We work across industries, with the deepest experience in retail, logistics, manufacturing, and B2B services. Our approach is built around company stage and operating model rather than industry vertical alone.",
+      "That's the most common starting point. Our discovery phase looks at the whole post-sales journey end to end, so we can pinpoint whether churn or dissatisfaction is driven by onboarding gaps, support friction, missing success coverage — or a mix — before recommending anything.",
   },
   {
-    question: "What does the first step of working together look like?",
+    question: "Do you work with clients outside India?",
     answer:
-      "It starts with a free 30-minute discovery call to understand your priorities and confirm fit. If it makes sense to proceed, we scope a fixed-fee diagnostic so you can evaluate the engagement with minimal risk before any longer-term commitment.",
+      "Yes. We're based in India and work with clients globally, running engagements remotely with working sessions scheduled across time zones.",
   },
   {
-    question: "Can you support us with a single project instead of a full retainer?",
+    question: "What does the first step look like?",
     answer:
-      "Yes. Many clients start with a single, well-defined project — a financial model, an org redesign, a systems audit — before deciding whether an ongoing retainer makes sense.",
+      "A free consultation call. We'll discuss your current customer experience challenges, share an honest view on whether we can help, and if it makes sense, scope a fixed-fee discovery phase — so you can evaluate working with us at minimal risk.",
   },
 ];

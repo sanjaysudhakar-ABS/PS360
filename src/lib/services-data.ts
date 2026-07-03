@@ -1,10 +1,10 @@
 import {
-  TrendingUp,
-  Landmark,
-  Users,
-  Cpu,
-  Workflow,
-  ShieldCheck,
+  Compass,
+  HeartHandshake,
+  Headset,
+  Rocket,
+  RefreshCcw,
+  BarChart3,
   type LucideIcon,
 } from "lucide-react";
 
@@ -21,230 +21,230 @@ export interface Service {
 
 export const services: Service[] = [
   {
-    slug: "business-strategy-consulting",
-    name: "Business Strategy & Growth Advisory",
+    slug: "customer-experience-strategy",
+    name: "CX Strategy & Journey Mapping",
     shortDescription:
-      "Clear, data-backed strategy to help you enter new markets, defend margins, and grow with confidence.",
+      "Map every touchpoint from first purchase to renewal, and build a CX strategy that turns experience into a competitive advantage.",
     description:
-      "We work alongside founders and leadership teams to turn ambiguous growth questions into a prioritized, executable plan. From market entry and competitive positioning to pricing and M&A readiness, our strategy consultants combine rigorous analysis with hands-on implementation support.",
-    icon: TrendingUp,
+      "We audit your end-to-end customer journey — onboarding, adoption, support, renewal — to find the moments where customers get stuck, frustrated, or quietly disengage. Then we design a prioritized CX roadmap tied to the metrics that matter: retention, expansion, and lifetime value.",
+    icon: Compass,
     keywords: [
-      "business strategy consulting",
-      "growth advisory firm",
-      "market entry strategy",
-      "competitive positioning consultant",
+      "customer experience strategy consulting",
+      "customer journey mapping",
+      "CX transformation consultant",
+      "customer touchpoint analysis",
     ],
     outcomes: [
-      "A 12–18 month growth roadmap with clear owners and milestones",
-      "Validated market entry or expansion plan",
-      "Pricing and margin improvement recommendations",
-      "Board-ready strategy documentation",
+      "A complete customer journey map with friction points ranked by revenue impact",
+      "A prioritized CX roadmap with owners, timelines, and success metrics",
+      "Moments-that-matter playbooks for onboarding, escalation, and renewal",
+      "Executive alignment on the CX metrics your teams will be measured on",
     ],
     process: [
       {
-        title: "Diagnose",
+        title: "Discover",
         description:
-          "We audit your market position, unit economics, and competitive landscape.",
+          "We interview customers and frontline teams, and mine your support and product data for friction signals.",
       },
       {
-        title: "Design",
+        title: "Map",
         description:
-          "We co-create a prioritized strategy with realistic timelines and resourcing.",
+          "We map the full post-sales journey and rank every friction point by effort and revenue impact.",
       },
       {
-        title: "Deliver",
+        title: "Roadmap",
         description:
-          "We support execution with milestone reviews so the plan doesn't sit in a slide deck.",
+          "We deliver a sequenced CX roadmap and stay engaged through the first improvement cycles.",
       },
     ],
   },
   {
-    slug: "financial-advisory",
-    name: "Financial Planning & Advisory",
+    slug: "customer-success-management",
+    name: "Customer Success Management",
     shortDescription:
-      "FP&A, fundraising support, and CFO-level advisory to keep cash flow, forecasting, and reporting under control.",
+      "Stand up or level up a customer success function that drives adoption, renewals, and expansion — not just check-in calls.",
     description:
-      "Our financial advisory practice gives growing businesses the discipline of an enterprise finance function without the overhead. We build forecasting models, prepare fundraising and lender materials, and set up the reporting cadence your board and investors expect.",
-    icon: Landmark,
+      "Whether you're hiring your first CSM or restructuring an existing team, we design the customer success operating model that fits your product and price point: segmentation, health scoring, playbooks, QBR cadences, and the handoffs between sales, onboarding, and support.",
+    icon: HeartHandshake,
     keywords: [
-      "financial advisory services",
-      "fractional CFO consulting",
-      "fundraising advisory",
-      "financial planning and analysis (FP&A)",
+      "customer success consulting",
+      "customer success operating model",
+      "customer health score design",
+      "CSM playbook development",
     ],
     outcomes: [
-      "A rolling 13-week cash flow and annual budget model",
-      "Investor- and lender-ready financial narrative",
-      "Board reporting pack and KPI dashboard",
-      "Cost structure and margin diagnostic",
+      "A customer segmentation model with the right touch level for each tier",
+      "A health score built on real usage and engagement signals, not gut feel",
+      "Lifecycle playbooks: onboarding, adoption, risk, renewal, and expansion",
+      "Clear sales-to-CS handoff so customers never repeat themselves",
     ],
     process: [
       {
         title: "Assess",
         description:
-          "We review your financials, systems, and reporting gaps.",
+          "We review your book of business, churn history, and current CS coverage model.",
       },
       {
-        title: "Model",
+        title: "Design",
         description:
-          "We build forecasting and scenario models tailored to your business.",
+          "We build segmentation, health scoring, and playbooks matched to your economics.",
       },
       {
-        title: "Advise",
+        title: "Operationalize",
         description:
-          "We support fundraising, budgeting cycles, and monthly close as an ongoing partner.",
+          "We train the team, wire up the tooling, and iterate through the first renewal cycles.",
       },
     ],
   },
   {
-    slug: "hr-workforce-solutions",
-    name: "HR & Workforce Solutions",
+    slug: "support-desk-operations",
+    name: "Support Desk Operations",
     shortDescription:
-      "From org design to hiring and retention, build a workforce strategy that scales with the business.",
+      "Faster resolutions, lower cost per ticket, and support quality your customers actually notice.",
     description:
-      "We help leadership teams get ahead of people problems before they become growth blockers — organizational design, compensation benchmarking, hiring pipelines, and performance management systems built for the stage you're actually at.",
-    icon: Users,
+      "We optimize the engine room of post-sales experience: ticket workflows, queue design, SLAs, knowledge bases, self-service deflection, and QA programs. The goal isn't just efficiency — it's a support experience consistent enough that customers stop dreading contact.",
+    icon: Headset,
     keywords: [
-      "HR consulting firm",
-      "workforce planning consultant",
-      "organizational design services",
-      "talent strategy advisory",
+      "support desk operations consulting",
+      "help desk optimization",
+      "customer support SLA design",
+      "ticket deflection strategy",
     ],
     outcomes: [
-      "An org design aligned to your next growth stage",
-      "Compensation and leveling framework benchmarked to market",
-      "Structured hiring and onboarding playbooks",
-      "Performance review and retention framework",
-    ],
-    process: [
-      {
-        title: "Map",
-        description:
-          "We map current org structure, roles, and workforce gaps.",
-      },
-      {
-        title: "Redesign",
-        description:
-          "We design the org chart, leveling, and compensation bands you need next.",
-      },
-      {
-        title: "Implement",
-        description:
-          "We roll out hiring, onboarding, and performance systems with your team.",
-      },
-    ],
-  },
-  {
-    slug: "digital-transformation",
-    name: "Digital Transformation & Technology Consulting",
-    shortDescription:
-      "Modernize systems, automate manual work, and stand up the tech stack your operations actually need.",
-    description:
-      "We assess where manual processes and legacy systems are costing you time and money, then design and implement a pragmatic technology roadmap — from workflow automation and CRM/ERP selection to data and AI readiness.",
-    icon: Cpu,
-    keywords: [
-      "digital transformation consulting",
-      "technology consulting firm",
-      "business process automation",
-      "CRM and ERP implementation advisory",
-    ],
-    outcomes: [
-      "A prioritized technology and automation roadmap",
-      "Vendor-neutral CRM/ERP selection support",
-      "Automated workflows replacing manual, error-prone processes",
-      "Data infrastructure ready for reporting and AI use cases",
+      "Redesigned ticket workflows with clear priorities, SLAs, and escalation paths",
+      "A knowledge base and self-service strategy that deflects repetitive tickets",
+      "A support QA scorecard and coaching rhythm that lifts CSAT",
+      "Capacity and staffing model matched to your actual ticket patterns",
     ],
     process: [
       {
         title: "Audit",
         description:
-          "We map your current systems, data flows, and manual bottlenecks.",
-      },
-      {
-        title: "Roadmap",
-        description:
-          "We prioritize initiatives by effort and business impact.",
-      },
-      {
-        title: "Implement",
-        description:
-          "We manage vendor selection and rollout alongside your team.",
-      },
-    ],
-  },
-  {
-    slug: "operations-process-excellence",
-    name: "Operations & Process Excellence",
-    shortDescription:
-      "Tighten up delivery, supply chain, and internal processes to protect margin as you scale.",
-    description:
-      "We help operationally intensive businesses remove waste, standardize processes, and build the operating rhythm needed to scale without scaling headcount at the same rate.",
-    icon: Workflow,
-    keywords: [
-      "operations consulting firm",
-      "process improvement consultant",
-      "supply chain optimization advisory",
-      "operational excellence consulting",
-    ],
-    outcomes: [
-      "Documented, standardized SOPs for core processes",
-      "Identified cost and cycle-time reduction opportunities",
-      "Capacity planning model for peak demand",
-      "Operating rhythm (weekly/monthly reviews) that sticks",
-    ],
-    process: [
-      {
-        title: "Observe",
-        description:
-          "We shadow operations to find bottlenecks and waste firsthand.",
+          "We analyze ticket data, handle times, contact drivers, and quality samples.",
       },
       {
         title: "Redesign",
         description:
-          "We redesign workflows and set measurable targets.",
+          "We rebuild workflows, SLAs, and self-service around your top contact drivers.",
       },
       {
-        title: "Embed",
+        title: "Coach",
         description:
-          "We train teams and stand up the operating rhythm to sustain gains.",
+          "We embed QA scorecards and coaching cadences so improvements stick.",
       },
     ],
   },
   {
-    slug: "risk-compliance-governance",
-    name: "Risk, Compliance & Governance",
+    slug: "customer-onboarding",
+    name: "Customer Onboarding Design",
     shortDescription:
-      "Build the governance, controls, and compliance foundation that lets you grow without surprises.",
+      "Get new customers to first value fast — before doubt, distraction, or a competitor gets there first.",
     description:
-      "As businesses scale, informal controls stop being enough. We help you stand up governance structures, compliance programs, and risk frameworks proportionate to your size — so growth doesn't outrun oversight.",
-    icon: ShieldCheck,
+      "The first 90 days decide most renewals. We design onboarding journeys that compress time-to-first-value: milestone plans, kickoff templates, in-product guidance, and the early-warning signals that tell you an account is drifting before it's too late.",
+    icon: Rocket,
     keywords: [
-      "risk and compliance advisory",
-      "corporate governance consulting",
-      "internal controls consultant",
-      "regulatory compliance advisory firm",
+      "customer onboarding consulting",
+      "time to first value optimization",
+      "SaaS onboarding journey design",
+      "new customer activation strategy",
     ],
     outcomes: [
-      "A risk register with prioritized mitigation plans",
-      "Board and governance structure fit for your stage",
-      "Documented internal controls and approval workflows",
-      "Compliance calendar mapped to your regulatory obligations",
+      "A milestone-based onboarding journey with clear definitions of 'activated'",
+      "Kickoff, training, and check-in templates your team can run consistently",
+      "Early-warning indicators that flag stalled accounts in the first 30 days",
+      "Shorter time-to-first-value and measurably higher 90-day retention",
     ],
     process: [
       {
-        title: "Identify",
+        title: "Define",
         description:
-          "We assess regulatory exposure and current control gaps.",
+          "We define what first value means for each customer segment you serve.",
       },
       {
-        title: "Structure",
+        title: "Design",
         description:
-          "We design governance and controls proportionate to your size.",
+          "We build the milestone journey, templates, and stall-detection signals.",
       },
       {
-        title: "Monitor",
+        title: "Launch",
         description:
-          "We help you maintain and evolve the program as you grow.",
+          "We pilot with live cohorts, measure activation, and tune the journey.",
+      },
+    ],
+  },
+  {
+    slug: "retention-churn-reduction",
+    name: "Retention & Churn Reduction",
+    shortDescription:
+      "Find out why customers really leave, then build the save motions and renewal engine to keep them.",
+    description:
+      "We go beyond exit surveys to diagnose the operational causes of churn — failed onboarding, unresolved support pain, missing champions, price-value mismatch — and build the risk playbooks, renewal processes, and win-back motions that move net revenue retention.",
+    icon: RefreshCcw,
+    keywords: [
+      "churn reduction consulting",
+      "customer retention strategy",
+      "net revenue retention improvement",
+      "renewal process design",
+    ],
+    outcomes: [
+      "A churn diagnostic that separates preventable losses from structural ones",
+      "At-risk playbooks with clear triggers, owners, and save offers",
+      "A renewal process that starts 120 days out, not two weeks before the date",
+      "A win-back program for the customers worth recovering",
+    ],
+    process: [
+      {
+        title: "Diagnose",
+        description:
+          "We analyze churned cohorts and interview lost customers to find root causes.",
+      },
+      {
+        title: "Build",
+        description:
+          "We create risk triggers, save playbooks, and a structured renewal motion.",
+      },
+      {
+        title: "Measure",
+        description:
+          "We track save rates and NRR through the next renewal cycles and refine.",
+      },
+    ],
+  },
+  {
+    slug: "cx-analytics-reporting",
+    name: "CX Analytics & Voice of Customer",
+    shortDescription:
+      "Turn CSAT, NPS, and support data into a voice-of-customer program that actually changes decisions.",
+    description:
+      "Most companies collect feedback; few act on it. We build the measurement layer for your post-sales operation — the right metrics per touchpoint, dashboards leadership actually reads, and a closed-loop process that turns customer feedback into fixes customers can feel.",
+    icon: BarChart3,
+    keywords: [
+      "voice of customer program",
+      "CX analytics consulting",
+      "NPS CSAT measurement strategy",
+      "customer feedback closed loop",
+    ],
+    outcomes: [
+      "A metrics framework: which of CSAT, NPS, CES to use where — and why",
+      "Executive CX dashboards connecting experience metrics to revenue",
+      "A closed-loop process so every detractor gets a follow-up and a fix",
+      "Quarterly voice-of-customer insights your product team will actually use",
+    ],
+    process: [
+      {
+        title: "Instrument",
+        description:
+          "We set up the right surveys and signals at each journey touchpoint.",
+      },
+      {
+        title: "Connect",
+        description:
+          "We link experience data to revenue outcomes in dashboards leaders read.",
+      },
+      {
+        title: "Close the loop",
+        description:
+          "We stand up the rhythm that turns feedback into visible fixes.",
       },
     ],
   },

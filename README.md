@@ -1,84 +1,75 @@
-# PS360 — 360-Degree Business Advisory
+# PS360 Consulting — ps360.in
 
-Marketing site for PS360, a business consulting firm covering strategy,
-financial advisory, HR, digital transformation, operations, and risk &
-compliance. Built with Next.js (App Router), TypeScript, and Tailwind CSS,
-optimized for SEO and lead generation.
+Marketing site for PS360 Consulting, a customer experience & customer success
+consulting firm. Built with Next.js (App Router, static export), TypeScript,
+and Tailwind CSS; deployed on Netlify; optimized for SEO and lead generation.
 
 ## Stack
 
-- **Next.js 16** (App Router, Turbopack, Server Actions)
-- **TypeScript**
-- **Tailwind CSS v4**
-- **Zod** for contact-form validation
-- **Resend** (optional) for emailing contact-form leads
+- **Next.js 16** (App Router, `output: "export"` static export)
+- **TypeScript** + **Tailwind CSS v4**
+- **Netlify** hosting + **Netlify Forms** for lead capture
+- **gray-matter + marked** for the file-based markdown blog
 - **lucide-react** for icons
+- **GA4** analytics + **AdSense** (IDs configured in `src/lib/site-config.ts`)
+
+## Weekly content publishing
+
+The blog is file-based: drop a markdown file into `content/blog/`, push, and
+Netlify deploys it — the post automatically appears on `/blog`, in
+`sitemap.xml`, and in the RSS feed at `/feed.xml`. **See
+[CONTENT-PLAYBOOK.md](./CONTENT-PLAYBOOK.md)** for the post template, writing
+guidelines, and a ready-to-assign 12-week topic calendar.
 
 ## SEO features
 
-- Per-page metadata (title templates, descriptions, canonical URLs, Open Graph
-  and Twitter cards) via the Next.js Metadata API
-- Dynamically generated `sitemap.xml` and `robots.txt` (`src/app/sitemap.ts`,
-  `src/app/robots.ts`) covering every service and blog page
+- Per-page metadata (titles, descriptions, canonicals, Open Graph/Twitter)
+- Generated `sitemap.xml`, `robots.txt`, and RSS feed covering every page
 - JSON-LD structured data: `ProfessionalService`, `Service`, `BlogPosting`,
-  `FAQPage`, and `BreadcrumbList` (`src/components/StructuredData.tsx`)
-- Generated Open Graph image and favicons (`src/app/opengraph-image.tsx`,
-  `src/app/icon.tsx`, `src/app/apple-icon.tsx`)
-- Static generation for every route (`generateStaticParams`) for fast,
-  crawlable pages
-- A content section (`/blog`) with keyword-targeted long-form articles for
-  organic search
+  `FAQPage`, `BreadcrumbList`
+- Generated Open Graph image and favicons
+- Every route statically prerendered
 
 ## Lead-generation features
 
-- Contact form (`/contact` and every service page) backed by a Server Action
-  with server-side validation and a honeypot field for spam
-- Optional email delivery of leads via [Resend](https://resend.com) — falls
-  back to logging submissions to the server console when unconfigured
-- Optional [Calendly](https://calendly.com) inline booking widget — shows a
-  graceful fallback CTA when no Calendly link is configured
-- Floating click-to-call and WhatsApp buttons on every page
-- Clear calls to action throughout (hero, service pages, blog posts, footer)
+- **Contact form** (on `/contact` and every service page) via Netlify Forms,
+  with client-side validation and a honeypot field — submissions appear in
+  the Netlify dashboard (Forms → `contact`); enable email notifications
+  there
+- **Newsletter signup** in the footer (Netlify form `newsletter`)
+- **Calendly embed** on `/contact` (set `NEXT_PUBLIC_CALENDLY_URL`)
+- **Click-to-call / WhatsApp** floating buttons — hidden until real numbers
+  are added in `src/lib/site-config.ts`
+- Case studies and consultation CTAs throughout
 
-## Getting started
+## Development
 
 ```bash
 npm install
-cp .env.example .env.local
-npm run dev
+npm run dev        # http://localhost:3000
+npm run build      # static export to ./out
+npm run lint
 ```
 
-Open [http://localhost:3000](http://localhost:3000).
+Note: form submissions only work on Netlify (the dev server has no Forms
+backend, so local submissions will show the error state).
+
+## Deployment (Netlify)
+
+`netlify.toml` is already configured (`npm run build`, publish `out/`).
+Connect the repo in Netlify and set environment variables:
+
+- `NEXT_PUBLIC_SITE_URL` — `https://ps360.in`
+- `NEXT_PUBLIC_CALENDLY_URL` — optional, enables the booking widget
+
+After the first deploy, check **Netlify → Forms** and confirm the `contact`
+and `newsletter` forms were detected, then add email notifications to
+`hello@ps360.in`.
 
 ## Configuration
 
-Before launching, update:
-
-1. **`src/lib/site-config.ts`** — business name, contact details (phone,
-   email, address), and social links. These feed the header, footer, and
-   `ProfessionalService` structured data.
-2. **`.env.local`** (see `.env.example`):
-   - `NEXT_PUBLIC_SITE_URL` — your production domain (used for canonical URLs,
-     sitemap, and structured data)
-   - `NEXT_PUBLIC_CALENDLY_URL` — your Calendly scheduling link, to enable the
-     booking widget on `/contact`
-   - `RESEND_API_KEY` — enables emailing contact-form leads
-   - `LEAD_NOTIFICATION_EMAIL` — inbox that receives lead notifications
-3. **`src/lib/testimonials-data.ts`** — replace placeholder testimonials with
-   real client quotes.
-4. **`src/lib/services-data.ts`** and **`src/lib/blog-data.ts`** — adjust or
-   extend service offerings and articles as needed.
-
-## Scripts
-
-- `npm run dev` — start the dev server
-- `npm run build` — production build (also runs type-checking)
-- `npm run start` — run the production build
-- `npm run lint` — run ESLint
-
-## Deployment
-
-This is a standard Next.js app and deploys cleanly to
-[Vercel](https://vercel.com/new) or any Node.js host that supports Next.js.
-Set the environment variables above in your hosting provider before going
-live.
+Business details (name, email, LinkedIn, GA4/AdSense IDs, nav, headline
+stats) live in `src/lib/site-config.ts`. Services, case studies, FAQs, and
+testimonials live in `src/lib/*-data.ts`. Testimonials and case studies are
+anonymized placeholders — swap in named quotes/results once client approval
+to publish is in place (marked with `TODO`).
