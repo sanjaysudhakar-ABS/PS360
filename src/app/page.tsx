@@ -22,6 +22,32 @@ export default function HomePage() {
       <Hero />
       <Stats />
 
+      <section className="bg-brand-950/[0.02] py-10">
+        <div className="mx-auto max-w-7xl px-6 lg:px-8">
+          <div className="flex flex-col items-start justify-between gap-5 rounded-2xl bg-brand-950 px-7 py-7 text-white sm:flex-row sm:items-center sm:px-9">
+            <div>
+              <p className="font-mono text-[11px] uppercase tracking-[0.18em] text-accent-400">
+                Free 3-minute assessment
+              </p>
+              <p className="mt-1.5 text-xl font-semibold tracking-tight">
+                How healthy is your post-sales experience?
+              </p>
+              <p className="mt-1 text-sm text-white/60">
+                15 questions, instant score across the five pillars that
+                decide whether customers renew.
+              </p>
+            </div>
+            <Link
+              href="/diagnostic"
+              className="inline-flex shrink-0 items-center gap-2 rounded-md bg-accent-500 px-5 py-3 text-sm font-semibold text-white transition hover:bg-accent-400"
+            >
+              Take the diagnostic
+              <ArrowRight className="h-4 w-4" />
+            </Link>
+          </div>
+        </div>
+      </section>
+
       <section className="py-20 sm:py-24">
         <div className="mx-auto max-w-7xl px-6 lg:px-8">
           <div className="flex flex-col justify-between gap-6 sm:flex-row sm:items-end">
