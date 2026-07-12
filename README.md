@@ -32,15 +32,43 @@ guidelines, and a ready-to-assign 12-week topic calendar.
 
 ## Lead-generation features
 
+- **Post-Sales Health Diagnostic** (`/diagnostic`) — an interactive 15-question
+  assessment that scores five post-sales pillars, captures the prospect's top
+  2–3 pain points, and submits everything (score, band, pillar breakdown,
+  pain points, contact details) via Netlify Forms (form `diagnostic`)
 - **Contact form** (on `/contact` and every service page) via Netlify Forms,
   with client-side validation and a honeypot field — submissions appear in
   the Netlify dashboard (Forms → `contact`); enable email notifications
   there
 - **Newsletter signup** in the footer (Netlify form `newsletter`)
-- **Calendly embed** on `/contact` (set `NEXT_PUBLIC_CALENDLY_URL`)
+- **Calendly booking** on `/contact` and in the diagnostic
+  (`src/lib/site-config.ts`, overridable via `NEXT_PUBLIC_CALENDLY_URL`)
 - **Click-to-call / WhatsApp** floating buttons — hidden until real numbers
   are added in `src/lib/site-config.ts`
 - Case studies and consultation CTAs throughout
+
+## Diagnostic email flow
+
+`netlify/functions/submission-created.mjs` runs on every verified form
+submission. For the `diagnostic` form it sends two emails through Resend:
+
+1. **To the prospect** — their full results: score, band summary, pillar
+   breakdown, the pain points they flagged, and the Calendly booking link
+2. **To PS360** — a lead alert with all of the above plus company/stage,
+   with reply-to set to the lead's address
+
+Setup (Netlify → Site configuration → Environment variables):
+
+- `RESEND_API_KEY` — required. Also verify the `ps360.in` domain in Resend
+  (Domains → Add domain), otherwise Resend refuses to send to arbitrary
+  recipients
+- `RESEND_FROM` — optional, defaults to `PS360 Consulting <hello@ps360.in>`
+- `LEAD_NOTIFICATION_EMAIL` — optional, defaults to `hello@ps360.in`
+
+If `RESEND_API_KEY` is unset the function no-ops safely — submissions are
+always stored in the Netlify Forms dashboard regardless. The `contact` and
+`newsletter` forms are not handled by the function; enable Netlify's
+built-in form notifications for those.
 
 ## Development
 
