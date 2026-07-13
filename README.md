@@ -11,7 +11,7 @@ and Tailwind CSS; deployed on Netlify; optimized for SEO and lead generation.
 - **Netlify** hosting + **Netlify Forms** for lead capture
 - **gray-matter + marked** for the file-based markdown blog
 - **lucide-react** for icons
-- **GA4** analytics + **AdSense** (IDs configured in `src/lib/site-config.ts`)
+- **GA4** analytics (ID configured in `src/lib/site-config.ts`)
 
 ## Weekly content publishing
 
@@ -96,7 +96,7 @@ and `newsletter` forms were detected, then add email notifications to
 
 ## Configuration
 
-Business details (name, email, LinkedIn, GA4/AdSense IDs, nav, headline
+Business details (name, email, LinkedIn, GA4 ID, nav, headline
 stats) live in `src/lib/site-config.ts`. Services, case studies, FAQs, and
 testimonials live in `src/lib/*-data.ts`. Testimonials and case studies are
 anonymized placeholders — swap in named quotes/results once client approval

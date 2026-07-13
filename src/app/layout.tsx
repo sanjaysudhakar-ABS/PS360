@@ -94,13 +94,6 @@ export default function RootLayout({
             gtag('config', '${siteConfig.analytics.ga4Id}');
           `}
         </Script>
-
-        {/* Google AdSense */}
-        <Script
-          src={`https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=${siteConfig.analytics.adsenseClient}`}
-          strategy="afterInteractive"
-          crossOrigin="anonymous"
-        />
       </body>
     </html>
   );
