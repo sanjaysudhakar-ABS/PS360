@@ -38,6 +38,26 @@ body {
   color: white;
 }
 
+/* Scrolling heartbeat line in the post-sales diagnostic. */
+@keyframes pulse-scroll {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+.pulse-anim {
+  animation: pulse-scroll 4.5s linear infinite;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .pulse-anim {
+    animation: none;
+  }
+}
+
 /* Rendered markdown body for blog posts. */
 .blog-prose {
   color: color-mix(in srgb, var(--brand-900) 90%, transparent);

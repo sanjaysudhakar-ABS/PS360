@@ -21,8 +21,10 @@ export const siteConfig = {
     whatsapp: "",
   },
 
-  // Set NEXT_PUBLIC_CALENDLY_URL to your real Calendly scheduling link to enable the embed.
-  calendlyUrl: process.env.NEXT_PUBLIC_CALENDLY_URL ?? "",
+  // Calendly scheduling link (env var overrides for other environments).
+  calendlyUrl:
+    process.env.NEXT_PUBLIC_CALENDLY_URL ??
+    "https://calendly.com/sanjay-sudhakar/new-meeting",
 
   analytics: {
     ga4Id: "G-NQ7NRH7XNY",
@@ -35,6 +37,7 @@ export const siteConfig = {
 
   nav: [
     { label: "Services", href: "/services" },
+    { label: "Diagnostic", href: "/diagnostic" },
     { label: "Case Studies", href: "/case-studies" },
     { label: "About", href: "/about" },
     { label: "Insights", href: "/blog" },
