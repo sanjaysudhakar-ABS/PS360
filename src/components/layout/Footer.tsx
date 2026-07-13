@@ -104,23 +104,10 @@ export function Footer() {
         </div>
 
         <div className="mt-12 flex flex-col items-center justify-between gap-4 border-t border-white/10 pt-8 text-sm text-white/50 md:flex-row">
-          <div>
-            <p>
-              &copy; {new Date().getFullYear()} {siteConfig.legalName}. All
-              rights reserved.
-            </p>
-            <p className="mt-1 text-xs text-white/40">
-              This site uses Google AdSense for advertising.{" "}
-              <a
-                href="https://policies.google.com/privacy"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="underline hover:text-accent-400"
-              >
-                Learn about Google&apos;s privacy practices
-              </a>
-            </p>
-          </div>
+          <p>
+            &copy; {new Date().getFullYear()} {siteConfig.legalName}. All
+            rights reserved.
+          </p>
           <div className="flex gap-6">
             <a
               href={siteConfig.social.linkedin}

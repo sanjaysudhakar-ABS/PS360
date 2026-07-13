@@ -44,12 +44,11 @@ export default function PrivacyPage() {
             described in this policy or as required by law.
           </p>
 
-          <h2>Advertising and Analytics</h2>
+          <h2>Analytics</h2>
           <p>
             This site uses Google Analytics to understand how visitors use the
-            site, and Google AdSense to display advertising. These services
-            may use cookies and similar technologies. You can learn more about
-            how Google uses data at{" "}
+            site. This service may use cookies and similar technologies. You
+            can learn more about how Google uses data at{" "}
             <a
               href="https://policies.google.com/privacy"
               target="_blank"

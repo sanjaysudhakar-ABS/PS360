@@ -28,7 +28,6 @@ export const siteConfig = {
 
   analytics: {
     ga4Id: "G-NQ7NRH7XNY",
-    adsenseClient: "ca-pub-5101218278922497",
   },
 
   social: {
