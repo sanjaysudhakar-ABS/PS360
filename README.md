@@ -40,7 +40,13 @@ guidelines, and a ready-to-assign 12-week topic calendar.
   with client-side validation and a honeypot field — submissions appear in
   the Netlify dashboard (Forms → `contact`); enable email notifications
   there
-- **Newsletter signup** in the footer (Netlify form `newsletter`)
+- **"Notify me when we publish" signup** in the footer (Netlify form
+  `newsletter`) — collects addresses into the Netlify Forms dashboard only.
+  Nothing is sent automatically: no welcome email, no scheduled send, no
+  unsubscribe flow, and the copy is deliberately worded to promise only
+  what that supports. Before doing any actual sending, connect a real
+  email provider (Mailchimp, ConvertKit, Beehiiv, or a Resend audience)
+  so opt-in and unsubscribe are handled properly.
 - **Calendly booking** on `/contact` and in the diagnostic
   (`src/lib/site-config.ts`, overridable via `NEXT_PUBLIC_CALENDLY_URL`)
 - **Click-to-call / WhatsApp** floating buttons — hidden until real numbers

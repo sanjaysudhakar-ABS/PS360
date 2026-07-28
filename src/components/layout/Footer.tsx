@@ -34,11 +34,12 @@ export function Footer() {
 
             <div className="mt-8 max-w-sm">
               <h3 className="text-sm font-semibold text-white">
-                CX insights, weekly
+                Get notified when we publish
               </h3>
               <p className="mt-1 text-xs text-white/60">
-                Practical customer experience and retention tactics in your
-                inbox. No spam, unsubscribe anytime.
+                Leave your email and we&apos;ll let you know when new customer
+                experience and retention insights go live. No newsletter blast,
+                no spam — and we&apos;ll remove you on request.
               </p>
               <NewsletterForm />
             </div>

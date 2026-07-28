@@ -38,7 +38,7 @@ export function NewsletterForm() {
     return (
       <p className="mt-3 flex items-center gap-2 text-sm text-emerald-400">
         <CheckCircle2 className="h-4 w-4" />
-        You&apos;re subscribed — see you in your inbox.
+        You&apos;re on the list — we&apos;ll be in touch when we publish.
       </p>
     );
   }
@@ -75,7 +75,7 @@ export function NewsletterForm() {
           disabled={status === "submitting"}
           className="shrink-0 rounded-md bg-accent-500 px-4 py-2 text-sm font-semibold text-white transition hover:bg-accent-400 disabled:opacity-70"
         >
-          {status === "submitting" ? "…" : "Subscribe"}
+          {status === "submitting" ? "…" : "Notify me"}
         </button>
       </div>
       {status === "error" && (
