@@ -70,22 +70,26 @@ export default function AboutPage() {
             <p>
               Founded in 2020, {siteConfig.name} emerged from a simple
               observation: while companies invest heavily in acquiring
-              customers, many struggle to create experiences that keep them
-              engaged and coming back. Our founders, seasoned CX and customer
-              success professionals, recognized the need for practical,
-              results-oriented consulting that bridges strategy with
-              execution.
+              customers, most of the growth they lose leaks out{" "}
+              <em>after</em> the sale — in stalled onboarding, overwhelmed
+              support queues, and renewals nobody owned until it was too
+              late.
             </p>
             <p>
-              Today, we&apos;ve helped over 50 companies across fintech,
-              e-commerce, SaaS, and other industries transform their customer
-              experience and achieve measurable business results. Our approach
-              combines deep expertise with hands-on implementation, ensuring
-              that our strategies translate into real-world success.
+              Our background is operational, not theoretical. Before
+              consulting, we ran the functions we now advise on — customer
+              experience, customer success, and support operations — inside
+              tech and non-tech businesses, from early-stage teams to
+              established companies. That&apos;s why every engagement pairs
+              strategy with hands-on implementation: we&apos;ve lived the
+              difference between a recommendation deck and a process that
+              actually holds up on a bad week.
             </p>
             <p>
-              We&apos;re based in India and serve clients globally, running
-              engagements remotely across time zones.
+              We work with growing businesses in fintech, e-commerce, SaaS,
+              and other service-led industries. We&apos;re based in India and
+              serve clients globally, running engagements remotely across
+              time zones.
             </p>
           </div>
         </div>

@@ -29,8 +29,13 @@ export default function CaseStudiesPage() {
             Case studies
           </h1>
           <p className="mt-5 text-lg text-brand-800/70">
-            Representative engagements showing how we transform post-sales
-            experience into measurable business results.
+            How we approach transforming post-sales experience into
+            measurable business results.
+          </p>
+          <p className="mx-auto mt-3 max-w-xl text-xs text-brand-800/50">
+            The scenarios below are illustrative, drawn from our team&apos;s
+            operating experience — company details are representative, not
+            named client accounts.
           </p>
         </div>
       </section>

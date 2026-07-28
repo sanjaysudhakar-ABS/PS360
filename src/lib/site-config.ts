@@ -43,12 +43,13 @@ export const siteConfig = {
     { label: "Contact", href: "/contact" },
   ],
 
-  // Headline numbers published on the current ps360.in site.
+  // Keep these factual — replace with real client metrics only once you
+  // can substantiate them.
   stats: [
-    { value: "50+", label: "Companies transformed" },
-    { value: "40%", label: "Average CSAT improvement" },
-    { value: "$10M+", label: "Client revenue impact" },
     { value: "2020", label: "Founded" },
+    { value: "6", label: "Post-sales practice areas" },
+    { value: "Global", label: "Clients served, from India" },
+    { value: "24 hrs", label: "Response time on every inquiry" },
   ],
 } as const;
 
