@@ -61,6 +61,14 @@ export function ContactForm({
       formData.forEach((value, key) => {
         body.append(key, value.toString());
       });
+      // The select's values are slugs (and "" for the default). Send the
+      // human-readable service name so the field is never empty and reads
+      // cleanly in the Netlify dashboard and notification emails.
+      const serviceSlug = formData.get("service")?.toString() ?? "";
+      body.set(
+        "service",
+        services.find((s) => s.slug === serviceSlug)?.name ?? "General inquiry",
+      );
 
       const response = await fetch("/", {
         method: "POST",
