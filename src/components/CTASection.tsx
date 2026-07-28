@@ -10,8 +10,9 @@ export function CTASection() {
           Ready to transform your customer experience?
         </h2>
         <p className="mx-auto mt-4 max-w-xl text-white/70">
-          Join 50+ companies who have transformed their customer experience
-          with {siteConfig.name}. Book a consultation today to get started.
+          Book a free consultation with {siteConfig.name} — we&apos;ll give
+          you an honest read on where your post-sales experience is losing
+          customers, and where to focus first.
         </p>
         <div className="mt-8 flex flex-col justify-center gap-4 sm:flex-row">
           <Link

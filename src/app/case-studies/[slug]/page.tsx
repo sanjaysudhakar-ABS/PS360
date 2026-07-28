@@ -87,6 +87,11 @@ export default async function CaseStudyPage({
               </div>
             ))}
           </div>
+          <p className="mt-4 text-xs text-white/40">
+            Illustrative scenario drawn from our team&apos;s operating
+            experience — details are representative, not a named client
+            account.
+          </p>
         </div>
       </section>
 

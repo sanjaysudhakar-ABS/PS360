@@ -3,9 +3,9 @@ import { ArrowRight, CheckCircle2 } from "lucide-react";
 import { siteConfig } from "@/lib/site-config";
 
 const proofPoints = [
-  "50+ companies transformed",
-  "40% average CSAT improvement",
-  "$10M+ client revenue impact",
+  "Post-sales is all we do — onboarding through renewal",
+  "Run by operators, hands-on through implementation",
+  "Start with a free 3-minute diagnostic",
 ];
 
 export function Hero() {
